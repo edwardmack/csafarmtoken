@@ -1,8 +1,8 @@
 # CSA Farm Token
-Code to create framework to model CSA Farms on Ethereum blockchain
+Code to create framework to model CSA Farms on Ethereum blockchain.  [More details regarding CSA.](https://www.nal.usda.gov/afsic/community-supported-agriculture)
 
 
-Work in progress, started at ETHWaterloo hackathon.
+Work in progress, started at ETHWaterloo hackathon 10/13/2017.
 
 setup (for testing with testrpc), I assume nodejs, Truffle Framework and testrpc are installed:
 
