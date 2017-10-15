@@ -8,13 +8,12 @@ contract CSATokenFactory {
         address tAddress;
         string name;
         uint initial_supply;
+        uint token_price;
     }
 
     address[] public childrenAddresses;
 
     mapping(address => CSATokenStruct) public csaChildren;
-
-    uint public testVal = 200;
 
     event CSATokenCreated(string name, uint initialSupply);
 
@@ -22,12 +21,13 @@ contract CSATokenFactory {
     function CSATokenFactory() {
     }
 
-    function createCSAToken(string _name, uint _initial_supply) payable {
-        address tAddress = new CSAToken(_name, _initial_supply);
+    function createCSAToken(string _name, uint _initial_supply, uint _token_price) payable {
+        address tAddress = new CSAToken(_name, _initial_supply, _token_price);
         childrenAddresses.push(tAddress);
         csaChildren[tAddress].tAddress = tAddress;
         csaChildren[tAddress].name = _name;
         csaChildren[tAddress].initial_supply = _initial_supply;
+        csaChildren[tAddress].token_price = _token_price;
         CSATokenCreated(_name, _initial_supply);
     }
 

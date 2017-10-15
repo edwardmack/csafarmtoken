@@ -11,7 +11,7 @@ contract("CSAToken", function(accounts) {
         })
         .then(function(result) {
             console.log("Total supply:", result);
-            assert.equal(result, 5000, "Expected 5000 in total supply");
+            assert.equal(result, 25, "Expected 25 in total supply");
         }) 
     });
 
@@ -19,7 +19,7 @@ contract("CSAToken", function(accounts) {
         return myToken.name.call()
         .then(function(result) {
             console.log("Name:", result);
-            assert.equal(result, "CSAToken", "Expected CSAToken as name");
+            assert.equal(result, "Farm Name", "Expected Farm Name as name");
         }) 
     });
 

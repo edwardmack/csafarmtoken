@@ -7,21 +7,20 @@ contract("CSATokenFactory", function(accounts) {
         return CSATokenFactory.deployed()
         .then(function(instance) {
             factory = instance;
-            return factory.testVal.call();
+            return;
         })
         .then(function(result) {
-            console.log("Total supply:", result);
-            //assert.equal(result, 5000, "Expected 5000 in total supply");
             return factory.childrenAddresses.length;
         })
         .then(function(result) {
             console.log("children length:", result);
+            assert.equal(result, 0, "Expected 0 children to start")
         })
     });
 
     it("should create token", function() {
         var amount = web3.toWei(0.01, "ether");
-        return factory.createCSAToken("myToken1", 4000, {from:accounts[0]})
+        return factory.createCSAToken("Farm Name", 25, 200, {from:accounts[0]})
         .then(function(result) {
             console.log("create token", result);
 
@@ -38,6 +37,7 @@ contract("CSATokenFactory", function(accounts) {
         })
         .then(function(result) {
             console.log("name:", result);
+            assert.equal(result, "Farm Name", "Expected value Farm Name");
         });
     });
 

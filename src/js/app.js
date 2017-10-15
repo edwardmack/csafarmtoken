@@ -1,7 +1,7 @@
 App = {
   web3Provider: null,
   contracts: {},
-  contractFactoryAddress: '0x3e4564bb1e4c65a12d1287b6e5bb872b0743cab8',
+  contractFactoryAddress: '0x6f6136a2d9cc6fa36ca13deb0a98b1883c4b0892',
   myAccount: '',
 
   init: function() {
@@ -86,7 +86,8 @@ App = {
                   tokenTemplate.find('.token-address').text(result[0]);
                   tokenTemplate.find('.initial-qty').text(result[2]);
                   tokenTemplate.find('.btn-purchase').attr('data-id', result[0]);
-                  //var sRes = result.split(",");
+                  tokenTemplate.find('.token-price').text(result[3]);
+
                   console.log("resFrom csaChildren split ");
                   console.log("resFrom csaChildren" + JSON.stringify(result));
                   console.log("resFrom csaChildren initial_supply: " + result[1]);
@@ -114,6 +115,7 @@ App = {
     var targetToken = $(event.target).data('id');
     console.log("myAccount: " + App.myAccount);
     console.log("target token " + targetToken);
+    var amount = web3.toWei(0.7, "ether");
     App.contracts.CSAToken.at(targetToken).transfer(App.myAccount, 2,  function(error, result) {
       if(!error) {
         console.log("transfer: " + result);
@@ -130,7 +132,9 @@ App = {
     
       var tokenName = $('#tokenName').val();
       var tokenQty = $('#tokenQty').val();
-      App.contracts.CSATokenFactory.at(App.contractFactoryAddress).createCSAToken(tokenName, tokenQty, function(error, result) {
+      var tokenPrice = $('#tokenPrice').val();
+      App.contracts.CSATokenFactory.at(App.contractFactoryAddress).createCSAToken(tokenName, 
+        tokenQty, tokenPrice, function(error, result) {
         if(!error) {
           console.log("result:" + result);
         } else {

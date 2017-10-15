@@ -27,13 +27,18 @@
         </div>
       </div>
       <div id="createCSAToken">
-        <p><strong>Name</strong><input id="tokenName" type="text"> </p>
-        <p><strong>Qty</strong><input id="tokenQty" type="text"> </p>
+        <table>
+          <tr><td><strong>Farm Name: </strong></td><td><input id="tokenName" type="text"></td></tr>
+          <tr><td><strong>Tokens Qty: </strong></td><td><input id="tokenQty" type="text"></td></tr>
+          <tr><td><strong>Price per Token: </strong></td><td><input id="tokenPrice" type="text"></td></tr>
+      </table>
         <button class="btn btn-create-token" type="button">Create CSA Token</button>
         <hr/>
+        <!--
         <br>
         <button class="btn btn-default btn-refresh" type="button">Refresh</button>
         <br>
+        -->
         <br>
     </div>
       <div id="tokensRow" class="row">
@@ -49,9 +54,11 @@
           </div>
          
           <div class="panel-body">
-            
-            <strong>Address</strong>: <span class="token-address">0x123</span><br/>
-            <strong>Initial Qty</strong>: <span class="initial-qty">3</span><br/>
+            <table>
+              <tr><td><strong>Address: </strong></td><td><span class="token-address">0x123</span></td></tr>
+              <tr><td><strong>Initial Qty: </strong></td><td><span class="initial-qty">3</span></td></tr>
+              <tr><td><strong>Token Price: </strong></td><td><span class="token-price">10</span></td></tr>
+            </table>
             <br/><br/>
             <button class="btn btn-default btn-purchase" type="button" data-id="0">Purchase</button>
           </div>

@@ -24,5 +24,13 @@ Then start the nodejs test server
 node src/js/server.js
 ```
 
-Browse to localhost:8080 and enjoy this demonstration of modeling a CSA Farm Subscription on the Ethereum blockchain.
+Browse to localhost:8080 and enjoy this demonstration of modeling a CSA Farm Subscription on the Ethereum blockchain.  
+
+There are also test cases created it the test directory for your review. These can be run with:
+```
+truffle test
+````
+
+Enjoy!
+
 
