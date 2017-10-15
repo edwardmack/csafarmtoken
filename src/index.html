@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>CSA Farm Token</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12 col-sm-8 col-sm-push-2">
+          <h1 class="text-center">CSA Farm Token</h1>
+          <hr/>
+          <br/>
+        </div>
+      </div>
+      <div id="createCSAToken">
+        <p><strong>Name</strong><input id="tokenName" type="text"> </p>
+        <p><strong>Qty</strong><input id="tokenQty" type="text"> </p>
+        <button class="btn btn-create-token" type="button">Create CSA Token</button>
+        <hr/>
+        <br>
+        <button class="btn btn-default btn-refresh" type="button">Refresh</button>
+        <br>
+        <br>
+    </div>
+      <div id="tokensRow" class="row">
+        <!-- Tokens LOAD HERE -->
+      </div>
+    </div>
+
+    <div id="tokenTemplate" style="display: none;">
+      <div class="col-sm-6 col-md-4 col-lg-3">
+        <div class="panel panel-default panel-pet">
+          <div class="panel-heading">
+            <h3 class="panel-title">TokenName</h3>
+          </div>
+         
+          <div class="panel-body">
+            
+            <strong>Address</strong>: <span class="token-address">0x123</span><br/>
+            <strong>Initial Qty</strong>: <span class="initial-qty">3</span><br/>
+            <br/><br/>
+            <button class="btn btn-default btn-purchase" type="button" data-id="0">Purchase</button>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/web3.min.js"></script>
+    <script src="js/truffle-contract.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
