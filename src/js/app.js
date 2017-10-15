@@ -76,7 +76,7 @@ App = {
       if(!error) {
         for(i = 0; i < result; i++ ) {
           
-          App.contracts.CSATokenFactory.at(App.contractFactoryAddress).childrenAddresses(0, function(error, result) {
+          App.contracts.CSATokenFactory.at(App.contractFactoryAddress).childrenAddresses(i, function(error, result) {
             if(!error) {
               // child contract address
               console.log("result: " + result);
