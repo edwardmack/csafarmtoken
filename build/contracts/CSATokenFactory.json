@@ -149,8 +149,56 @@
       "links": {},
       "address": "0x6f6136a2d9cc6fa36ca13deb0a98b1883c4b0892",
       "updated_at": 1508044987379
+    },
+    "1508079337803": {
+      "events": {
+        "0x2ecd0570a76d624b75b5c274f787ae308893ca55fbb3e8273fb155a709cf950a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "initialSupply",
+              "type": "uint256"
+            }
+          ],
+          "name": "CSATokenCreated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xbfa7950aaebb6fdfe21357c05315dd4da7141651",
+      "updated_at": 1508079536803
+    },
+    "1508358585913": {
+      "events": {
+        "0x2ecd0570a76d624b75b5c274f787ae308893ca55fbb3e8273fb155a709cf950a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "initialSupply",
+              "type": "uint256"
+            }
+          ],
+          "name": "CSATokenCreated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0x0776cf9021b6db58b3c9c5f9db4a674e2f9ebd74",
+      "updated_at": 1508358602398
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1508044987379
+  "updated_at": 1508358602398
 }

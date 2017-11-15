@@ -1,7 +1,7 @@
 App = {
   web3Provider: null,
   contracts: {},
-  contractFactoryAddress: '0x6f6136a2d9cc6fa36ca13deb0a98b1883c4b0892',
+  contractFactoryAddress: '0x0776cf9021b6db58b3c9c5f9db4a674e2f9ebd74',
   myAccount: '',
 
   init: function() {
