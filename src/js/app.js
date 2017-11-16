@@ -1,7 +1,7 @@
 App = {
   web3Provider: null,
   contracts: {},
-  contractFactoryAddress: '0x0776cf9021b6db58b3c9c5f9db4a674e2f9ebd74',
+  contractFactoryAddress: '0xf204a4ef082f5c04bb89f7d5e6568b796096735a',
   myAccount: '',
 
   init: function() {
@@ -15,7 +15,7 @@ App = {
       App.web3Provider = web3.currentProvider;
     } else {
       // If no injected web3 instance is detected, fallback to the TestRPC
-      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:8545');
+      App.web3Provider = new Web3.providers.HttpProvider('http://localhost:7545');
     }
   
     web3 = new Web3(App.web3Provider);
