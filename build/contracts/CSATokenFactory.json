@@ -221,8 +221,32 @@
       "links": {},
       "address": "0x0776cf9021b6db58b3c9c5f9db4a674e2f9ebd74",
       "updated_at": 1508358602398
+    },
+    "1511966280269": {
+      "events": {
+        "0x2ecd0570a76d624b75b5c274f787ae308893ca55fbb3e8273fb155a709cf950a": {
+          "anonymous": false,
+          "inputs": [
+            {
+              "indexed": false,
+              "name": "name",
+              "type": "string"
+            },
+            {
+              "indexed": false,
+              "name": "initialSupply",
+              "type": "uint256"
+            }
+          ],
+          "name": "CSATokenCreated",
+          "type": "event"
+        }
+      },
+      "links": {},
+      "address": "0xe29584e49a98b079347d4a0877ddd660b32432dc",
+      "updated_at": 1511966408252
     }
   },
   "schema_version": "0.0.5",
-  "updated_at": 1510800815539
+  "updated_at": 1511966408252
 }
