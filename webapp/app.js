@@ -7,7 +7,33 @@ var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
+/*
+var admin = require('firebase-admin');
+var serviceAccount = require('./keys/csa-farm-token-firebase-adminsdk-p3iva-5d58191a1e.json');
 
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://csa-farm-token.firebaseio.com'
+});
+
+var db = admin.database();
+var ref = db.ref('/contract');
+ref.on('value', function(snapshot) {
+  console.log(snapshot.val());
+}, function(errorObject) {
+  console.log('The read failed: ' + errorObject.code);
+});
+*/
+/*
+// test save
+var contractRef = ref.child('contract');
+contractRef.set({
+  farm1: {
+    name: 'my farm',
+    address: 'aoeuaoeuoaue'
+  }
+})
+*/
 var app = express();
 
 // view engine setup

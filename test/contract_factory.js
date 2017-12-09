@@ -38,7 +38,7 @@ contract("CSATokenFactory", function(accounts) {
         })
         .then(function(result) {
             console.log("name:", result);
-            assert.equal(result, "Farm Name", "Expected value Farm Name");
+            assert.equal(result, "CSA farm token", "Expected value CSA farm token");
         });
     });
 
